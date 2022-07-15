@@ -35,6 +35,9 @@ export const Actions = styled.div`
 `;
 
 export const Link = styled.a`
+  border: none;
+  background: none;
+  padding: 0;
   img {
     width: 2rem;
   }

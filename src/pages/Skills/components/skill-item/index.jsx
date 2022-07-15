@@ -1,11 +1,13 @@
 import React from "react";
 
-import { StyledSkillItem, Icon, HoverText } from "./SkillItem.elements";
+import { StyledSkillItem, Icon, HoverText, Circle } from "./SkillItem.elements";
 
 const SkillItem = ({ icon, hoverText }) => {
   return (
     <StyledSkillItem>
-      <Icon src={icon} alt={hoverText} />
+      <Circle>
+        <Icon src={icon} alt={hoverText} />
+      </Circle>
       <HoverText>{hoverText}</HoverText>
     </StyledSkillItem>
   );
