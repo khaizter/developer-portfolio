@@ -2,15 +2,17 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   position: sticky;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: ${(props) => props.theme.primary};
+`;
+
+export const FlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 1.75rem;
-  padding-inline: 4rem;
 `;
 
 export const Brand = styled.a`

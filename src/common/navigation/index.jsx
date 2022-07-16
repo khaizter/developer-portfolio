@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Nav, List, ListItem } from "./Navigation.elements";
-import Resume from "../../../../assets/pdf/Resume.pdf";
+import Resume from "../../assets/pdf/Resume.pdf";
 
 const Navigation = () => {
   return (

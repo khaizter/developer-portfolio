@@ -1,6 +1,7 @@
 import React from "react";
 
-import { StyledContact, Title } from "./Contact.elements";
+import { StyledContact, FlexContainer, Title } from "./Contact.elements";
+import Wrapper from "../../common/wrapper";
 import ContactList from "./components/contact-list";
 
 import PhoneIcon from "../../assets/svg/phone.svg";
@@ -28,8 +29,12 @@ const contacts = [
 const Contact = () => {
   return (
     <StyledContact id="contact-section">
-      <Title>Contact</Title>
-      <ContactList contacts={contacts} />
+      <Wrapper>
+        <FlexContainer>
+          <Title>Contact</Title>
+          <ContactList contacts={contacts} />
+        </FlexContainer>
+      </Wrapper>
     </StyledContact>
   );
 };

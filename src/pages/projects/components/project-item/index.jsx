@@ -14,8 +14,8 @@ import LinkIcon from "../../../../assets/svg/link.svg";
 import GithubIcon from "../../../../assets/svg/github.svg";
 import DotsIcon from "../../../../assets/svg/dots.svg";
 
-import Backdrop from "../../../../common/header/components/backdrop";
-import Modal from "../../../../common/header/components/modal";
+import Backdrop from "../../../../common/backdrop";
+import Modal from "../../../../common/modal";
 
 import ProjectDetails from "../project-details";
 import { useEffect } from "react";
@@ -27,14 +27,6 @@ const ProjectItem = ({ project }) => {
 
   const openDetailsHandler = () => setShowDetails(true);
   const closeDetailsHandler = () => setShowDetails(false);
-
-  useEffect(() => {
-    if (showDetails) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-  }, [showDetails]);
 
   return (
     <>

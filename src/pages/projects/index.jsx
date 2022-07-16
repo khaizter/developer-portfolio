@@ -1,6 +1,7 @@
 import React from "react";
 
-import { StyledProjects, Title } from "./Projects.elements";
+import { StyledProjects, FlexContainer, Title } from "./Projects.elements";
+import Wrapper from "../../common/wrapper";
 import ProjectList from "./components/project-list";
 
 import ReactIcon from "../../assets/svg/react.svg";
@@ -154,8 +155,12 @@ const projects = [
 const Projects = () => {
   return (
     <StyledProjects id="projects-section">
-      <Title>Projects</Title>
-      <ProjectList projects={projects} />
+      <Wrapper>
+        <FlexContainer>
+          <Title>Projects</Title>
+          <ProjectList projects={projects} />
+        </FlexContainer>
+      </Wrapper>
     </StyledProjects>
   );
 };

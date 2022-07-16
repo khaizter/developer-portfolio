@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 export const StyledContact = styled.footer`
+  background-color: ${(props) => props.theme.primary};
+`;
+
+export const FlexContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3.75rem;
-  background-color: ${(props) => props.theme.primary};
-  padding: 5rem;
+  padding-block: 5rem;
 `;
 
 export const Title = styled.h1`
   color: white;
+  font-size: clamp(2.5rem, 1rem + 2vw, 3rem);
 `;

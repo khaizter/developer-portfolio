@@ -1,13 +1,17 @@
 import React from "react";
-import { StyledHero } from "./Hero.elements";
+import { StyledHero, FlexContainer, StyledHeroDisplay } from "./Hero.elements";
 import HeroContent from "./components/hero-content";
-import HeroDisplay from "../../assets/svg/HeroDisplay";
+import Wrapper from "../../common/wrapper";
 
 const Hero = () => {
   return (
     <StyledHero id="home-section">
-      <HeroContent />
-      <HeroDisplay />
+      <Wrapper>
+        <FlexContainer>
+          <HeroContent />
+          <StyledHeroDisplay />
+        </FlexContainer>
+      </Wrapper>
     </StyledHero>
   );
 };

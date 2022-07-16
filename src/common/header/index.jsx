@@ -1,14 +1,21 @@
 import React from "react";
-import Navigation from "./components/navigation";
-import { StyledHeader, Brand } from "./Header.elements";
+import Navigation from "../navigation";
+import NavigationMenu from "../navigation-menu";
+import { StyledHeader, FlexContainer, Brand } from "./Header.elements";
+import Wrapper from "../wrapper";
 
 const Header = () => {
   return (
     <StyledHeader>
-      <Brand href="#">
-        <span>{"<"}</span>KHAIZTER<span>{"/>"}</span>
-      </Brand>
-      <Navigation />
+      <Wrapper>
+        <FlexContainer>
+          <Brand href="#home-section">
+            <span>{"<"}</span>KHAIZTER<span>{"/>"}</span>
+          </Brand>
+          <Navigation />
+          <NavigationMenu />
+        </FlexContainer>
+      </Wrapper>
     </StyledHeader>
   );
 };

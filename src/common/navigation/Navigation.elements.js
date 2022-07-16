@@ -1,8 +1,14 @@
 import styled from "styled-components";
+import Device from "../../globals/Devices";
 
 export const Nav = styled.nav`
   color: ${(props) => props.theme.white};
   font-size: 1.5rem;
+  display: none;
+
+  @media ${Device.laptop} {
+    display: block;
+  }
 `;
 
 export const List = styled.ul`
