@@ -5,7 +5,7 @@ import HeroDisplay from "../../assets/svg/HeroDisplay";
 
 const Hero = () => {
   return (
-    <StyledHero>
+    <StyledHero id="home-section">
       <HeroContent />
       <HeroDisplay />
     </StyledHero>

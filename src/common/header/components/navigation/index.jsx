@@ -7,16 +7,16 @@ const Navigation = () => {
     <Nav>
       <List>
         <ListItem active>
-          <a href="#">Home</a>
+          <a href="#home-section">Home</a>
         </ListItem>
         <ListItem>
-          <a href="#">About Me</a>
+          <a href="#skills-section">Skills</a>
         </ListItem>
         <ListItem>
-          <a href="#">Projects</a>
+          <a href="#projects-section">Projects</a>
         </ListItem>
         <ListItem>
-          <a href="#">Contact</a>
+          <a href="#contact-section">Contact</a>
         </ListItem>
       </List>
     </Nav>

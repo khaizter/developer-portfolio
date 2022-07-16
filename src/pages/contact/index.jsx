@@ -32,7 +32,7 @@ const contacts = [
 
 const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id="contact-section">
       <Title>Contact</Title>
       <ContactList contacts={contacts} />
     </StyledContact>

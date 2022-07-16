@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import {
   StyledProjectItem,
-  Image,
+  DisplayImage,
   Content,
   Title,
   Description,
@@ -18,24 +18,30 @@ import Backdrop from "../../../../common/header/components/backdrop";
 import Modal from "../../../../common/header/components/modal";
 
 import ProjectDetails from "../project-details";
+import { useEffect } from "react";
 
-const ProjectItem = ({
-  image,
-  title,
-  description,
-  demoUrl,
-  githubUrl,
-  detailsUrl,
-}) => {
+const ProjectItem = ({ project }) => {
+  const { images, title, description, demoUrl, githubUrl } = project;
+
   const [showDetails, setShowDetails] = useState(false);
 
   const openDetailsHandler = () => setShowDetails(true);
   const closeDetailsHandler = () => setShowDetails(false);
 
+  useEffect(() => {
+    if (showDetails) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [showDetails]);
+
   return (
     <>
       <StyledProjectItem>
-        <Image src={image} alt={title} />
+        <DisplayImage>
+          <img src={images[0].src} alt={title} />
+        </DisplayImage>
         <Content>
           <Title>{title}</Title>
           <Description>{description}</Description>
@@ -54,7 +60,7 @@ const ProjectItem = ({
       </StyledProjectItem>
       <Backdrop showBackdrop={showDetails} onClickOut={closeDetailsHandler} />
       <Modal showModal={showDetails}>
-        <ProjectDetails />
+        <ProjectDetails project={project} onClose={closeDetailsHandler} />
       </Modal>
     </>
   );

@@ -9,8 +9,14 @@ export const StyledProjectItem = styled.div`
     0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
 `;
 
-export const Image = styled.img`
+export const DisplayImage = styled.div`
+  background-color: hsl(0, 0%, 98%);
   width: 100%;
+  img {
+    mix-blend-mode: darken;
+    display: block;
+    width: 100%;
+  }
 `;
 
 export const Content = styled.div`

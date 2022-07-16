@@ -120,7 +120,7 @@ const Skills = () => {
       : skills.filter((skill) => skill.category === filter);
 
   return (
-    <StyledSkills>
+    <StyledSkills id="skills-section">
       <Title>Skills & Technologies</Title>
       <Filter setFilter={setFilter} />
       <SkillList skills={filteredSkills} />

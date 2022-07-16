@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     height: 100%;
+    scroll-behavior: smooth;
   }
 
   *,
@@ -36,6 +37,25 @@ const GlobalStyle = createGlobalStyle`
   button {
     font-family: inherit;
   }
+
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: ${(props) => props.theme.accent}; 
+}
 `;
 
 export default GlobalStyle;

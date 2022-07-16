@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const StyledModal = styled.div`
-  position: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
   z-index: 3;
-  height: 100vh;
 `;
