@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 
-import ReactIcon from "../../../../assets/svg/react.svg";
-
 import LinkIcon from "../../../../assets/svg/link.svg";
 
 import GithubIcon from "../../../../assets/svg/github.svg";
-
-import TodoScreenshot from "../../../../assets/images/todo-app.png";
 
 import CloseIcon from "../../../../assets/svg/close.svg";
 
@@ -81,7 +77,7 @@ const ProjectDetails = ({ project, onClose }) => {
 
       <Content>
         <Close onClick={onClose}>
-          <img src={CloseIcon} alt="" />
+          <img src={CloseIcon} alt="close button" />
         </Close>
         <Title>{title}</Title>
         <Technologies>
@@ -115,12 +111,12 @@ const ProjectDetails = ({ project, onClose }) => {
           </List>
         </ScrollableDiv>
         <Actions>
-          <Link href={demoUrl}>
-            <img src={LinkIcon} alt="" />
+          <Link href={demoUrl} target="_blank">
+            <img src={LinkIcon} alt="Demo" />
             <span>Demo</span>
           </Link>
-          <Link href={githubUrl}>
-            <img src={GithubIcon} alt="" />
+          <Link href={githubUrl} target="_blank">
+            <img src={GithubIcon} alt="Repository" />
             <span>Repo</span>
           </Link>
         </Actions>

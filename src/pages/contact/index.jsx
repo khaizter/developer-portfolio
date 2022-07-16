@@ -23,11 +23,6 @@ const contacts = [
     title: "Location",
     info: "Cavite, Philippines",
   },
-  {
-    icon: LocationIcon,
-    title: "Location",
-    info: "Cavite, Philippines",
-  },
 ];
 
 const Contact = () => {

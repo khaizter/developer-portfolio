@@ -55,7 +55,7 @@ const projects = [
       "Edit text of task",
       "Auto save or auto sync of task to the database",
     ],
-    demoUrl: "https://khaizter.github.io/todo-app/",
+    demoUrl: "https://todo-khaizter.netlify.app/signin",
     githubUrl: "https://github.com/khaizter/todo-app",
     technologies: [
       { src: ReactIcon, name: "React" },
@@ -91,8 +91,8 @@ const projects = [
       "Adding a movie to favorite list",
       "Adding comments to a movie",
     ],
-    demoUrl: "https://khaizter.github.io/todo-app/",
-    githubUrl: "https://github.com/khaizter/todo-app",
+    demoUrl: "https://khaizter-my-movie-list.netlify.app/",
+    githubUrl: "https://github.com/khaizter/my-movie-list",
     technologies: [
       { src: ReactIcon, name: "React" },
       { src: ReactRouterIcon, name: "React Router" },
@@ -117,8 +117,8 @@ const projects = [
       "Filtering country by region and search qury",
       "Theme Switching (light mode, dark mode)",
     ],
-    demoUrl: "https://khaizter.github.io/todo-app/",
-    githubUrl: "https://github.com/khaizter/todo-app",
+    demoUrl: "https://khaizter-where-in-the-world.netlify.app/",
+    githubUrl: "https://github.com/khaizter/country-theme-switch",
     technologies: [
       { src: ReactIcon, name: "React" },
       { src: ReactRouterIcon, name: "React Router" },
@@ -142,8 +142,8 @@ const projects = [
       "Adding and removing items from cart",
       "Viewing products via light box",
     ],
-    demoUrl: "https://khaizter.github.io/todo-app/",
-    githubUrl: "https://github.com/khaizter/todo-app",
+    demoUrl: "https://khaizter.github.io/ecommerce-product-page/",
+    githubUrl: "https://github.com/khaizter/ecommerce-product-page#links",
     technologies: [
       { src: ReactIcon, name: "React" },
       { src: StyledComponentsIcon, name: "Styled Components" },

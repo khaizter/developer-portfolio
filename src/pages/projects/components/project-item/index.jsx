@@ -46,14 +46,14 @@ const ProjectItem = ({ project }) => {
           <Title>{title}</Title>
           <Description>{description}</Description>
           <Actions>
-            <Link href={demoUrl}>
+            <Link href={demoUrl} target="_blank">
               <img src={LinkIcon} alt="demo" />
             </Link>
-            <Link href={githubUrl}>
+            <Link href={githubUrl} target="_blank">
               <img src={GithubIcon} alt="github" />
             </Link>
             <Link as="button" onClick={openDetailsHandler}>
-              <img src={DotsIcon} alt="view details" />
+              <img src={DotsIcon} alt="more details" />
             </Link>
           </Actions>
         </Content>

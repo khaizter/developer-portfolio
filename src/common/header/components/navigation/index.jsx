@@ -1,12 +1,13 @@
 import React from "react";
 
 import { Nav, List, ListItem } from "./Navigation.elements";
+import Resume from "../../../../assets/pdf/Resume.pdf";
 
 const Navigation = () => {
   return (
     <Nav>
       <List>
-        <ListItem active>
+        <ListItem>
           <a href="#home-section">Home</a>
         </ListItem>
         <ListItem>
@@ -17,6 +18,11 @@ const Navigation = () => {
         </ListItem>
         <ListItem>
           <a href="#contact-section">Contact</a>
+        </ListItem>
+        <ListItem resume>
+          <a href={Resume} target="_blank">
+            Resume
+          </a>
         </ListItem>
       </List>
     </Nav>

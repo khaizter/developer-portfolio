@@ -18,8 +18,16 @@ const HeroContent = () => {
         / ReactJS / NodeJS and some other cool libraries and frameworks.
       </HeroParagraph>
       <HeroActions>
-        <HeroButton>View on Github</HeroButton>
-        <HeroButton>View on LinkedIn</HeroButton>
+        <HeroButton as="a" href="https://github.com/khaizter/" target="_blank">
+          View on Github
+        </HeroButton>
+        <HeroButton
+          as="a"
+          href="https://www.linkedin.com/in/khaizter-vash-topacio-a22bb0232/"
+          target="_blank"
+        >
+          View on LinkedIn
+        </HeroButton>
       </HeroActions>
     </StyledHeroContent>
   );

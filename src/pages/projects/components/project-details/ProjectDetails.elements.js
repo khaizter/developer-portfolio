@@ -135,6 +135,12 @@ export const Close = styled.button`
   cursor: pointer;
   img {
     display: block;
+    transition: transform 0.2s ease-in-out;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -181,6 +187,7 @@ export const ScrollableDiv = styled.div`
   flex-direction: column;
   gap: 1rem;
   overflow-y: scroll;
+  color: ${(props) => props.theme.secondaryText};
 `;
 
 export const About = styled.p``;
@@ -202,6 +209,7 @@ export const Link = styled.a`
   border: 1px solid black;
   padding-block: 0.5rem;
   padding-inline: 1rem;
+  transition: all 0.2s ease-out;
   span {
     vertical-align: middle;
   }
@@ -210,5 +218,9 @@ export const Link = styled.a`
     width: 1.5rem;
     vertical-align: middle;
     margin-right: 0.25rem;
+  }
+  &:hover {
+    font-weight: 700;
+    border-radius: 8px;
   }
 `;

@@ -20,8 +20,6 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
-      {/* <Backdrop showBackdrop={true} />
-      <Modal showModal={true} /> */}
     </ThemeProvider>
   );
 }

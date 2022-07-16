@@ -5,7 +5,9 @@ import { StyledHeader, Brand } from "./Header.elements";
 const Header = () => {
   return (
     <StyledHeader>
-      <Brand href="#">KHAIZTER</Brand>
+      <Brand href="#">
+        <span>{"<"}</span>KHAIZTER<span>{"/>"}</span>
+      </Brand>
       <Navigation />
     </StyledHeader>
   );

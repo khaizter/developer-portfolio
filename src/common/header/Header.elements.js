@@ -14,7 +14,21 @@ export const StyledHeader = styled.header`
 `;
 
 export const Brand = styled.a`
+  display: block;
+
+  font-family: "Josefin Sans", sans-serif;
   color: ${(props) => props.theme.accent};
   text-decoration: none;
   font-size: 2.25rem;
+  span {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+
+    &:nth-child(1) {
+      margin-right: 0.75rem;
+    }
+    &:nth-child(2) {
+      margin-left: 0.75rem;
+    }
+  }
 `;
