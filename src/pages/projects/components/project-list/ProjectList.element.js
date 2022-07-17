@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledProjectList = styled.ul`
+export const StyledProjectList = styled(motion.ul)`
   display: grid;
   justify-content: center;
   column-gap: 2.5rem;

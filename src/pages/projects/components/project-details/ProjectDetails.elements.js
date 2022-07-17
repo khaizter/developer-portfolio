@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import Device from "../../../../globals/Devices";
 
-export const StyledProjectDetails = styled.div`
+import { motion } from "framer-motion";
+
+export const StyledProjectDetails = styled(motion.div)`
   position: fixed;
   top: 2rem;
   left: 50%;
@@ -149,7 +151,7 @@ export const ThumbnailItem = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   display: grid;
   grid-row-gap: 1rem;
   grid-template-rows: max-content max-content max-content 1fr max-content;
@@ -165,7 +167,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Close = styled.button`
+export const Close = styled(motion.button)`
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -185,9 +187,9 @@ export const Close = styled.button`
   }
 `;
 
-export const Title = styled.h1``;
+export const Title = styled(motion.h1)``;
 
-export const Technologies = styled.ul`
+export const Technologies = styled(motion.ul)`
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -224,7 +226,7 @@ export const TechnologyItem = styled.li`
   }
 `;
 
-export const ScrollableDiv = styled.div`
+export const ScrollableDiv = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -240,7 +242,7 @@ export const List = styled.ul`
   }
 `;
 
-export const Actions = styled.div`
+export const Actions = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   gap: 1rem;

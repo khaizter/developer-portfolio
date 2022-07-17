@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledContactItem = styled.li`
+import { motion } from "framer-motion";
+
+export const StyledContactItem = styled(motion.li)`
   width: 16.8125rem;
   display: flex;
   flex-direction: column;

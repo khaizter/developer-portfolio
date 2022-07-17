@@ -152,12 +152,37 @@ const projects = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+const titleVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeInOut",
+    },
+  },
+};
+
 const Projects = () => {
   return (
     <StyledProjects id="projects-section">
       <Wrapper>
-        <FlexContainer>
-          <Title>Projects</Title>
+        <FlexContainer
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Title variants={titleVariants}>Projects</Title>
           <ProjectList projects={projects} />
         </FlexContainer>
       </Wrapper>

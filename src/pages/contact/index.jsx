@@ -32,15 +32,40 @@ const contacts = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+const titleVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeInOut",
+    },
+  },
+};
+
 const Contact = () => {
   return (
     <StyledContact id="contact-section">
       <Wrapper>
-        <FlexContainer>
+        <FlexContainer
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+        >
           <UpArrow href="#home-section">
             <img src={ChevronUpIcon} alt="go up" />
           </UpArrow>
-          <Title>Contact</Title>
+          <Title variants={titleVariants}>Contact</Title>
           <ContactList contacts={contacts} />
         </FlexContainer>
       </Wrapper>

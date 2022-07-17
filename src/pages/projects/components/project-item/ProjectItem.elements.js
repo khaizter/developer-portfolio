@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledProjectItem = styled.div`
+import { motion } from "framer-motion";
+
+export const StyledProjectItem = styled(motion.div)`
   display: flex;
   flex-direction: column;
   overflow: hidden;

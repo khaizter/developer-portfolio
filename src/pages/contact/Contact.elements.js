@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import Device from "../../globals/Devices";
 
+import { motion } from "framer-motion";
+
 export const StyledContact = styled.footer`
   background-color: ${(props) => props.theme.primary};
 `;
 
-export const FlexContainer = styled.div`
+export const FlexContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +19,7 @@ export const FlexContainer = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   color: white;
   font-size: clamp(2.5rem, 1rem + 2vw, 3rem);
 `;

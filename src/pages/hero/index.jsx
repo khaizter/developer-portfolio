@@ -27,7 +27,7 @@ const Hero = () => {
         <FlexContainer
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
         >
           <HeroContent />
           <StyledHeroDisplay variants={heroDisplayVariants} />

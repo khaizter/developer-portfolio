@@ -19,6 +19,17 @@ import Modal from "../../../../common/modal";
 
 import ProjectDetails from "../project-details";
 
+const listItemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
+
 const ProjectItem = ({ project }) => {
   const { images, title, description, demoUrl, githubUrl } = project;
 
@@ -29,7 +40,10 @@ const ProjectItem = ({ project }) => {
 
   return (
     <>
-      <StyledProjectItem onClick={openDetailsHandler}>
+      <StyledProjectItem
+        onClick={openDetailsHandler}
+        variants={listItemVariants}
+      >
         <DisplayImage>
           <img src={images[0].src} alt={title} />
         </DisplayImage>

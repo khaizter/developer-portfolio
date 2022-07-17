@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledContactList = styled.ul`
+import { motion } from "framer-motion";
+
+export const StyledContactList = styled(motion.ul)`
   width: 100%;
   display: flex;
   flex-wrap: wrap;

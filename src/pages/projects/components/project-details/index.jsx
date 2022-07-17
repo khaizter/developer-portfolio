@@ -8,6 +8,7 @@ import CloseIcon from "../../../../assets/svg/close.svg";
 
 import ChevronRightIcon from "../../../../assets/svg/chevron-right.svg";
 import ChevronLeftIcon from "../../../../assets/svg/chevron-left.svg";
+import { motion } from "framer-motion";
 
 import {
   StyledProjectDetails,
@@ -28,6 +29,31 @@ import {
   Link,
   Display,
 } from "./ProjectDetails.elements";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
+const contentVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const contentChildrenVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
 
 const ProjectDetails = ({ project, onClose }) => {
   const {
@@ -56,8 +82,13 @@ const ProjectDetails = ({ project, onClose }) => {
   };
 
   return (
-    <StyledProjectDetails>
-      <Preview>
+    <StyledProjectDetails
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
+      <Preview variants={containerVariants}>
         <Display>
           <img src={images[currentSlide].src} alt={images[currentSlide].name} />
           <NextSlider onClick={nextSlideHandler}>
@@ -81,12 +112,12 @@ const ProjectDetails = ({ project, onClose }) => {
           })}
         </Thumbnails>
       </Preview>
-      <Content>
-        <Close onClick={onClose}>
+      <Content variants={contentVariants}>
+        <Close onClick={onClose} variants={contentChildrenVariants}>
           <img src={CloseIcon} alt="close button" />
         </Close>
-        <Title>{title}</Title>
-        <Technologies>
+        <Title variants={contentChildrenVariants}>{title}</Title>
+        <Technologies variants={contentChildrenVariants}>
           {technologies.map((technology, index) => {
             return (
               <TechnologyItem key={index}>
@@ -96,19 +127,19 @@ const ProjectDetails = ({ project, onClose }) => {
             );
           })}
         </Technologies>
-        <h2>About</h2>
-        <ScrollableDiv>
+        <motion.h2 variants={contentChildrenVariants}>About</motion.h2>
+        <ScrollableDiv variants={contentChildrenVariants}>
           {about?.map((paragraph, index) => {
             return <About key={index}>{paragraph}</About>;
           })}
 
-          <h3>Features</h3>
+          {features && <h3>Features</h3>}
           <List>
             {features?.map((feature, index) => {
               return <li key={index}>{feature}</li>;
             })}
           </List>
-          <h3>Future Development</h3>
+          {futureDevelopment && <h3>Future Development</h3>}
 
           <List>
             {futureDevelopment?.map((item, index) => {
@@ -116,7 +147,7 @@ const ProjectDetails = ({ project, onClose }) => {
             })}
           </List>
         </ScrollableDiv>
-        <Actions>
+        <Actions variants={contentChildrenVariants}>
           <Link href={demoUrl} target="_blank">
             <img src={LinkIcon} alt="Demo" />
             <span>Demo</span>

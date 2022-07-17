@@ -13,6 +13,17 @@ import LocationIcon from "../../../../assets/svg/location.svg";
 import ClipboardIcon from "../../../../assets/svg/copyclipboard.svg";
 import ClipboardCheckIcon from "../../../../assets/svg/copyclipboardcheck.svg";
 
+const listItemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
+
 const ContactItem = ({ icon, title, info }) => {
   const [copied, setCopied] = useState(false);
 
@@ -33,7 +44,7 @@ const ContactItem = ({ icon, title, info }) => {
   }, [copied]);
 
   return (
-    <StyledContactItem onClick={clipboardHandler}>
+    <StyledContactItem onClick={clipboardHandler} variants={listItemVariants}>
       <img src={icon} alt="" />
       <Title>{title}</Title>
       <Info>{info}</Info>
