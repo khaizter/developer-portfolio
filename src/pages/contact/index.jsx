@@ -1,12 +1,18 @@
 import React from "react";
 
-import { StyledContact, FlexContainer, Title } from "./Contact.elements";
+import {
+  StyledContact,
+  FlexContainer,
+  Title,
+  UpArrow,
+} from "./Contact.elements";
 import Wrapper from "../../common/wrapper";
 import ContactList from "./components/contact-list";
 
 import PhoneIcon from "../../assets/svg/phone.svg";
 import EmailIcon from "../../assets/svg/email.svg";
 import LocationIcon from "../../assets/svg/location.svg";
+import ChevronUpIcon from "../../assets/svg/double-chevron-up.svg";
 
 const contacts = [
   {
@@ -31,6 +37,9 @@ const Contact = () => {
     <StyledContact id="contact-section">
       <Wrapper>
         <FlexContainer>
+          <UpArrow href="#home-section">
+            <img src={ChevronUpIcon} alt="go up" />
+          </UpArrow>
           <Title>Contact</Title>
           <ContactList contacts={contacts} />
         </FlexContainer>

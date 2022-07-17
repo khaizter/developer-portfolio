@@ -21,18 +21,23 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   a {
-    /* color: ${(props) => (props.active ? props.theme.accent : "inherit")}; */
     color: ${(props) => (props.resume ? props.theme.accent : "inherit")};
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
     text-decoration: none;
     &:hover,
     &:active {
       color: ${(props) => props.theme.accent};
     }
-
-    ${(props) =>
-      props.resume ? "border: 1px solid white;padding: 0.5rem 1rem;" : ""};
   }
+`;
 
-  button {
+export const ListItemResume = styled(ListItem)`
+  a {
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
   }
 `;

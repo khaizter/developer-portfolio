@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Nav, List, ListItem } from "./Navigation.elements";
+import { Nav, List, ListItem, ListItemResume } from "./Navigation.elements";
 import Resume from "../../assets/pdf/Resume.pdf";
 
 const Navigation = () => {
@@ -19,11 +19,11 @@ const Navigation = () => {
         <ListItem>
           <a href="#contact-section">Contact</a>
         </ListItem>
-        <ListItem resume>
+        <ListItemResume resume>
           <a href={Resume} target="_blank">
             Resume
           </a>
-        </ListItem>
+        </ListItemResume>
       </List>
     </Nav>
   );

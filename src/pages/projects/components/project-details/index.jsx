@@ -6,6 +6,9 @@ import GithubIcon from "../../../../assets/svg/github.svg";
 
 import CloseIcon from "../../../../assets/svg/close.svg";
 
+import ChevronRightIcon from "../../../../assets/svg/chevron-right.svg";
+import ChevronLeftIcon from "../../../../assets/svg/chevron-left.svg";
+
 import {
   StyledProjectDetails,
   Preview,
@@ -57,8 +60,12 @@ const ProjectDetails = ({ project, onClose }) => {
       <Preview>
         <Display>
           <img src={images[currentSlide].src} alt={images[currentSlide].name} />
-          <NextSlider onClick={nextSlideHandler}>Next</NextSlider>
-          <PrevSlider onClick={prevSlideHandler}>Prev</PrevSlider>
+          <NextSlider onClick={nextSlideHandler}>
+            <img src={ChevronRightIcon} alt="next slider" />
+          </NextSlider>
+          <PrevSlider onClick={prevSlideHandler}>
+            <img src={ChevronLeftIcon} alt="prev-slider" />
+          </PrevSlider>
         </Display>
         <Thumbnails>
           {images.map((image, index) => {
@@ -74,7 +81,6 @@ const ProjectDetails = ({ project, onClose }) => {
           })}
         </Thumbnails>
       </Preview>
-
       <Content>
         <Close onClick={onClose}>
           <img src={CloseIcon} alt="close button" />

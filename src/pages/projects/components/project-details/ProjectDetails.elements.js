@@ -1,16 +1,33 @@
 import styled from "styled-components";
+import Device from "../../../../globals/Devices";
 
 export const StyledProjectDetails = styled.div`
   position: fixed;
-  top: 50%;
+  top: 2rem;
   left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: 55%;
-  width: 80%;
+  transform: translateX(-50%);
+  max-height: calc(100vh - 4rem);
+  /* overflow-y: scroll; */
+
+  /* height: 80vh; */
+  width: calc(100% - 4rem);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 0;
+  /* padding-block: 2rem; */
+
+  @media ${Device.tablet} {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 55%;
+    gap: 2rem;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 export const Preview = styled.div`
@@ -18,10 +35,14 @@ export const Preview = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  width: 45%;
+  width: 100%;
   img {
     display: block;
     width: 100%;
+  }
+
+  @media ${Device.tablet} {
+    width: 45%;
   }
 `;
 
@@ -35,15 +56,10 @@ export const Display = styled.div`
 `;
 
 export const NextSlider = styled.button`
-  opacity: 0;
   display: block;
   color: white;
   background: none;
-  background-image: linear-gradient(
-    to right,
-    transparent,
-    rgba(0, 0, 0, 0.548)
-  );
+
   padding-inline: 1rem;
   border: none;
   margin: 0;
@@ -54,16 +70,24 @@ export const NextSlider = styled.button`
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  opacity: 1;
   &:hover {
     opacity: 1;
   }
+  @media ${Device.tablet} {
+    opacity: 0;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba(0, 0, 0, 0.548)
+    );
+  }
 `;
+
 export const PrevSlider = styled.button`
-  opacity: 0;
   display: block;
   color: white;
   background: none;
-  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.548));
   padding-inline: 1rem;
   border: none;
   margin: 0;
@@ -74,16 +98,28 @@ export const PrevSlider = styled.button`
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  opacity: 1;
 
   &:hover {
     opacity: 1;
   }
+  @media ${Device.tablet} {
+    opacity: 0;
+    background-image: linear-gradient(
+      to left,
+      transparent,
+      rgba(0, 0, 0, 0.548)
+    );
+  }
 `;
 
 export const Thumbnails = styled.div`
-  display: flex;
   justify-content: center;
   gap: 40px;
+  display: none;
+  @media ${Device.tablet} {
+    display: flex;
+  }
 `;
 
 export const ThumbnailItem = styled.div`
@@ -117,11 +153,16 @@ export const Content = styled.div`
   display: grid;
   grid-row-gap: 1rem;
   grid-template-rows: max-content max-content max-content 1fr max-content;
-  max-height: 32rem;
+  min-height: 0;
   background-color: white;
   padding: 2rem;
-  width: 45%;
+  width: 100%;
   position: relative;
+
+  @media ${Device.tablet} {
+    width: 45%;
+    max-height: 32rem;
+  }
 `;
 
 export const Close = styled.button`
@@ -148,6 +189,7 @@ export const Title = styled.h1``;
 
 export const Technologies = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   gap: 0.5rem;
   margin: 0;

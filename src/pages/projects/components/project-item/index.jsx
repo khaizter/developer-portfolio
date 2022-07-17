@@ -18,7 +18,6 @@ import Backdrop from "../../../../common/backdrop";
 import Modal from "../../../../common/modal";
 
 import ProjectDetails from "../project-details";
-import { useEffect } from "react";
 
 const ProjectItem = ({ project }) => {
   const { images, title, description, demoUrl, githubUrl } = project;
@@ -30,7 +29,7 @@ const ProjectItem = ({ project }) => {
 
   return (
     <>
-      <StyledProjectItem>
+      <StyledProjectItem onClick={openDetailsHandler}>
         <DisplayImage>
           <img src={images[0].src} alt={title} />
         </DisplayImage>
@@ -38,10 +37,18 @@ const ProjectItem = ({ project }) => {
           <Title>{title}</Title>
           <Description>{description}</Description>
           <Actions>
-            <Link href={demoUrl} target="_blank">
+            <Link
+              href={demoUrl}
+              target="_blank"
+              onClick={(e) => e.stopPropagation()}
+            >
               <img src={LinkIcon} alt="demo" />
             </Link>
-            <Link href={githubUrl} target="_blank">
+            <Link
+              href={githubUrl}
+              target="_blank"
+              onClick={(e) => e.stopPropagation()}
+            >
               <img src={GithubIcon} alt="github" />
             </Link>
             <Link as="button" onClick={openDetailsHandler}>

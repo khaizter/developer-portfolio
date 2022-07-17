@@ -31,6 +31,7 @@ export const Info = styled.p``;
 export const CopyClipboard = styled.img`
   display: none;
   position: absolute;
+  width: 2rem;
   right: 0.5rem;
   top: 0.5rem;
 `;
