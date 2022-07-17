@@ -28,6 +28,7 @@ const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
         >
           <HeroContent />
           <StyledHeroDisplay variants={heroDisplayVariants} />

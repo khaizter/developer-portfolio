@@ -35,6 +35,7 @@ const Projects = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
         >
           <Title variants={titleVariants}>Projects</Title>
           <ProjectList projects={projects} />

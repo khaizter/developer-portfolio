@@ -13,8 +13,8 @@ function App() {
       <Header />
       <GlobalStyle />
       <Hero />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
     </ThemeProvider>
   );

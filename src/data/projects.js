@@ -109,7 +109,7 @@ const projects = [
     ],
     features: [
       "Viewing country details",
-      "Filtering country by region and search qury",
+      "Filtering country by region and search query",
       "Theme Switching (light mode, dark mode)",
     ],
     demoUrl: "https://khaizter-where-in-the-world.netlify.app/",
@@ -138,7 +138,7 @@ const projects = [
       "Viewing products via light box",
     ],
     demoUrl: "https://khaizter.github.io/ecommerce-product-page/",
-    githubUrl: "https://github.com/khaizter/ecommerce-product-page#links",
+    githubUrl: "https://github.com/khaizter/ecommerce-product-page",
     technologies: [
       { src: ReactIcon, name: "React" },
       { src: StyledComponentsIcon, name: "Styled Components" },

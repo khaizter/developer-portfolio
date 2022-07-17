@@ -42,6 +42,7 @@ const Contact = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
         >
           <UpArrow href="#home-section">
             <img src={ChevronUpIcon} alt="go up" />
