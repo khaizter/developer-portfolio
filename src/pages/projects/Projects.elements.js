@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Device from "../../globals/Devices";
 export const StyledProjects = styled.section`
   background-color: ${(props) => props.theme.white};
 `;
@@ -9,7 +9,10 @@ export const FlexContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  padding-block: 6.25rem;
+  padding-block: 4rem;
+  @media ${Device.tablet} {
+    padding-block: 6.25rem;
+  }
 `;
 
 export const Title = styled.h1`

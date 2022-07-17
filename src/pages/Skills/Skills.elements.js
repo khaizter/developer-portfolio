@@ -1,18 +1,24 @@
 import styled from "styled-components";
+import Device from "../../globals/Devices";
 
 export const StyledSkills = styled.section`
+  background-color: ${(props) => props.theme.white};
+  background-color: #fcfcfc;
+  min-height: calc(100vh - 100px);
+`;
+
+export const FlexContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  background-color: ${(props) => props.theme.white};
-  background-color: #fcfcfc;
-  min-height: calc(100vh - 100px);
-  padding-block: 6.25rem;
-  padding-inline: 4rem;
+  padding-block: 4rem;
+  @media ${Device.tablet} {
+    padding-block: 6.25rem;
+  }
 `;
 
 export const Title = styled.h1`
   color: ${(props) => props.theme.primaryText};
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 1rem + 2vw, 3rem);
 `;

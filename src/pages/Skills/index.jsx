@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import { StyledSkills, Title } from "./Skills.elements";
+import { StyledSkills, FlexContainer, Title } from "./Skills.elements";
+import Wrapper from "../../common/wrapper";
 import Filter from "./components/filter";
 import SkillList from "./components/skill-list";
 
@@ -121,9 +122,13 @@ const Skills = () => {
 
   return (
     <StyledSkills id="skills-section">
-      <Title>Skills & Technologies</Title>
-      <Filter setFilter={setFilter} />
-      <SkillList skills={filteredSkills} />
+      <Wrapper>
+        <FlexContainer>
+          <Title>Skills & Technologies</Title>
+          <Filter setFilter={setFilter} />
+          <SkillList skills={filteredSkills} />
+        </FlexContainer>
+      </Wrapper>
     </StyledSkills>
   );
 };

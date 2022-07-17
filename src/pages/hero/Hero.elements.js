@@ -10,14 +10,18 @@ export const FlexContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  padding-block: 6.25rem;
+  gap: 2rem;
+  padding-block: 4rem;
   @media ${Device.tablet} {
     flex-direction: row;
+    padding-block: 6.25rem;
   }
 `;
 
 export const StyledHeroDisplay = styled(HeroDisplay)`
+  aspect-ratio: 128/97;
   width: 100%;
+  height: auto;
   @media ${Device.tablet} {
     width: 50%;
   }

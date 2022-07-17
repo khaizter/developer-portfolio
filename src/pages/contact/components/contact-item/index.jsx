@@ -1,17 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import { StyledContactItem, Title, Info } from "./ContactItem.elements";
+import {
+  StyledContactItem,
+  Title,
+  Info,
+  CopyClipboard,
+} from "./ContactItem.elements";
 
 import PhoneIcon from "../../../../assets/svg/phone.svg";
 import EmailIcon from "../../../../assets/svg/email.svg";
 import LocationIcon from "../../../../assets/svg/location.svg";
+import ClipboardIcon from "../../../../assets/svg/copyclipboard.svg";
+import ClipboardCheckIcon from "../../../../assets/svg/copyclipboardcheck.svg";
 
 const ContactItem = ({ icon, title, info }) => {
+  const [copied, setCopied] = useState(false);
+
+  const clipboardHandler = () => {
+    navigator.clipboard.writeText(info);
+    setCopied(true);
+  };
+
+  useEffect(() => {
+    if (!copied) return;
+    const checkTimeout = setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(checkTimeout);
+    };
+  }, [copied]);
+
   return (
-    <StyledContactItem>
+    <StyledContactItem onClick={clipboardHandler}>
       <img src={icon} alt="" />
       <Title>{title}</Title>
       <Info>{info}</Info>
+      <CopyClipboard
+        src={copied ? ClipboardCheckIcon : ClipboardIcon}
+        alt="copy to clipboard"
+      />
     </StyledContactItem>
   );
 };

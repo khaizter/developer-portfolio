@@ -21,7 +21,7 @@ export const Brand = styled.a`
   font-family: "Josefin Sans", sans-serif;
   color: ${(props) => props.theme.accent};
   text-decoration: none;
-  font-size: 2.25rem;
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.25rem);
   span {
     font-family: "Montserrat", sans-serif;
     color: white;

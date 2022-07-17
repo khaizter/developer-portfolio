@@ -36,33 +36,20 @@ export const HeroActions = styled.div`
 
 export const HeroButton = styled.button`
   text-decoration: none;
-  border: none;
-  background-color: ${(props) => props.theme.accent};
-  /* border: 1px solid ${(props) => props.theme.primary}; */
   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
     0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
-  color: white;
-  /* color: ${(props) => props.theme.primary}; */
+  background-color: transparent;
+  border: 1px solid ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   font-size: 1.25rem;
   padding-block: 0.625rem;
   padding-inline: 1.25rem;
   border-radius: 8px;
   position: relative;
 
-  &::after {
-    content: "";
-    background-color: ${(props) => props.theme.secondary};
-
-    position: absolute;
-    bottom: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20%;
-    height: 2px;
-    transition: width 0.2s ease-in-out;
-  }
-
-  &:hover::after {
-    width: 60%;
+  &:hover {
+    border: 1px solid transparent;
+    background-color: ${(props) => props.theme.accent};
+    color: ${(props) => props.theme.white};
   }
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Device from "../../globals/Devices";
 
 export const StyledContact = styled.footer`
   background-color: ${(props) => props.theme.primary};
@@ -9,7 +10,10 @@ export const FlexContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 3.75rem;
-  padding-block: 5rem;
+  padding-block: 4rem;
+  @media ${Device.tablet} {
+    padding-block: 6.25rem;
+  }
 `;
 
 export const Title = styled.h1`
