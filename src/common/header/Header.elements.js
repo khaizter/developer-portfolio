@@ -18,7 +18,6 @@ export const FlexContainer = styled(motion.div)`
 
 export const Brand = styled(motion.a)`
   display: block;
-
   font-family: "Josefin Sans", sans-serif;
   color: ${(props) => props.theme.accent};
   text-decoration: none;
@@ -28,12 +27,12 @@ export const Brand = styled(motion.a)`
 export const SymbolLeft = styled(motion.span)`
   display: inline-block;
   font-family: "Montserrat", sans-serif;
-  color: white;
+  color: ${(props) => props.theme.white};
   margin-right: 0.75rem;
 `;
 export const SymbolRight = styled(motion.span)`
   display: inline-block;
   font-family: "Montserrat", sans-serif;
-  color: white;
+  color: ${(props) => props.theme.white};
   margin-left: 0.75rem;
 `;

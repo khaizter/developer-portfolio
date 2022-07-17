@@ -22,7 +22,7 @@ export const List = styled(motion.ul)`
 
 export const ListItem = styled(motion.li)`
   a {
-    color: ${(props) => (props.resume ? props.theme.accent : "inherit")};
+    color: inherit;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
     text-decoration: none;
     &:hover,
@@ -34,11 +34,12 @@ export const ListItem = styled(motion.li)`
 
 export const ListItemResume = styled(ListItem)`
   a {
-    border: 1px solid white;
+    border: 1px solid ${(props) => props.theme.white};
     padding: 0.5rem 1rem;
+    color: ${(props) => props.theme.accent};
     &:hover {
-      background-color: white;
-      color: black;
+      background-color: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.primary};
     }
   }
 `;

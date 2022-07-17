@@ -4,10 +4,8 @@ import Projects from "./pages/projects";
 import Contact from "./pages/contact";
 import Skills from "./pages/skills";
 import Header from "./common/header";
-import { light, dark } from "./globals/Themes";
+import { light } from "./globals/Themes";
 import { ThemeProvider } from "styled-components";
-import { TbApi } from "react-icons/tb";
-import { Card } from "@material-ui/core";
 
 function App() {
   return (

@@ -117,7 +117,7 @@ export const PrevSlider = styled.button`
 
 export const Thumbnails = styled.div`
   justify-content: center;
-  gap: 40px;
+  gap: 2.5rem;
   display: none;
   @media ${Device.tablet} {
     display: flex;

@@ -9,28 +9,9 @@ import {
 import Wrapper from "../../common/wrapper";
 import ContactList from "./components/contact-list";
 
-import PhoneIcon from "../../assets/svg/phone.svg";
-import EmailIcon from "../../assets/svg/email.svg";
-import LocationIcon from "../../assets/svg/location.svg";
 import ChevronUpIcon from "../../assets/svg/double-chevron-up.svg";
 
-const contacts = [
-  {
-    icon: PhoneIcon,
-    title: "Phone",
-    info: "201910381",
-  },
-  {
-    icon: EmailIcon,
-    title: "Email",
-    info: "khaizter.vashh@gmail.com",
-  },
-  {
-    icon: LocationIcon,
-    title: "Location",
-    info: "Cavite, Philippines",
-  },
-];
+import contacts from "../../data/contacts";
 
 const containerVariants = {
   hidden: {},

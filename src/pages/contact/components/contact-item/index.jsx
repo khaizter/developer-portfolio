@@ -7,9 +7,6 @@ import {
   CopyClipboard,
 } from "./ContactItem.elements";
 
-import PhoneIcon from "../../../../assets/svg/phone.svg";
-import EmailIcon from "../../../../assets/svg/email.svg";
-import LocationIcon from "../../../../assets/svg/location.svg";
 import ClipboardIcon from "../../../../assets/svg/copyclipboard.svg";
 import ClipboardCheckIcon from "../../../../assets/svg/copyclipboardcheck.svg";
 

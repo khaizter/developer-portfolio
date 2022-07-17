@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import Device from "../../globals/Devices";
 
+import { motion } from "framer-motion";
+
 export const StyledSkills = styled.section`
   background-color: ${(props) => props.theme.white};
   background-color: #fcfcfc;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 6.25rem);
 `;
 
-export const FlexContainer = styled.div`
+export const FlexContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +20,7 @@ export const FlexContainer = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   color: ${(props) => props.theme.primaryText};
   font-size: clamp(2.5rem, 1rem + 2vw, 3rem);
 `;
