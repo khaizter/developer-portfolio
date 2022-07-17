@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import Device from "../../globals/Devices";
 import HeroDisplay from "../../assets/svg/HeroDisplay";
+import { motion } from "framer-motion";
 
 export const StyledHero = styled.section`
   background-color: ${(props) => props.theme.white};
 `;
 
-export const FlexContainer = styled.div`
+export const FlexContainer = styled(motion.div)`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;

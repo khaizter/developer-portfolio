@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Device from "../../globals/Devices";
+import { motion } from "framer-motion";
 
 export const StyledNavigationMenu = styled.div`
   display: block;
@@ -15,7 +16,7 @@ export const Hamburger = styled.button`
   cursor: pointer;
 `;
 
-export const Nav = styled.nav`
+export const Nav = styled(motion.nav)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -25,13 +26,14 @@ export const Nav = styled.nav`
   top: 0;
   right: 0;
   padding-block: 1.25rem;
-  padding-inline: 3.4rem;
+  padding-inline: 2rem;
   height: 100vh;
   background-color: white;
   font-size: 2.25rem;
 `;
 
-export const Close = styled.button`
+export const Close = styled(motion.button)`
+  display: block;
   align-self: flex-end;
   padding: 0;
   border: none;
@@ -47,7 +49,7 @@ export const Close = styled.button`
   }
 `;
 
-export const List = styled.ul`
+export const List = styled(motion.ul)`
   align-self: stretch;
   list-style: none;
   margin: 0;
@@ -57,7 +59,7 @@ export const List = styled.ul`
   gap: 1rem;
 `;
 
-export const ListItem = styled.li`
+export const ListItem = styled(motion.li)`
   font-size: 2.25rem;
   position: relative;
   a {
@@ -80,13 +82,15 @@ export const ListItem = styled.li`
   }
 `;
 
-export const ResumeLink = styled.a`
+export const ResumeLink = styled(motion.a)`
   display: block;
   border: 2px solid black;
   padding: 1rem 2rem;
   text-decoration: none;
   border-radius: 4px;
+  transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${(props) => props.theme.accent};
+    background-color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.white};
   }
 `;

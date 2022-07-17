@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import ReactDom from "react-dom";
 
 import { StyledModal } from "./Modal.element";
+import { AnimatePresence } from "framer-motion";
 
 const Modal = ({ showModal, children }) => {
   useEffect(() => {
@@ -12,9 +13,10 @@ const Modal = ({ showModal, children }) => {
     }
   }, [showModal]);
 
-  if (!showModal) return null;
   return ReactDom.createPortal(
-    <StyledModal>{children}</StyledModal>,
+    <AnimatePresence>
+      {showModal ? <StyledModal>{children}</StyledModal> : null}
+    </AnimatePresence>,
     document.getElementById("modal")
   );
 };

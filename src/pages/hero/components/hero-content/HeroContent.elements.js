@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Device from "../../../../globals/Devices";
+import { motion } from "framer-motion";
 
-export const StyledHeroContent = styled.div`
+export const StyledHeroContent = styled(motion.div)`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -13,19 +14,19 @@ export const StyledHeroContent = styled.div`
   }
 `;
 
-export const HeroTitle = styled.h1`
+export const HeroTitle = styled(motion.h1)`
   color: ${(props) => props.theme.primaryText};
   font-size: clamp(2.5rem, 1rem + 2vw, 3rem);
 `;
 
-export const HeroParagraph = styled.p`
+export const HeroParagraph = styled(motion.p)`
   max-width: 45ch;
   line-height: 1.2;
   color: ${(props) => props.theme.secondaryText};
   font-size: 1rem;
 `;
 
-export const HeroActions = styled.div`
+export const HeroActions = styled(motion.div)`
   display: flex;
   flex-direction: column;
   @media ${Device.mobileM} {

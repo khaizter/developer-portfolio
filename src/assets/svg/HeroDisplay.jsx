@@ -1,8 +1,10 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 const HeroDisplay = (props) => {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       dataname="Layer 1"
       width="786.81995"
@@ -785,7 +787,7 @@ const HeroDisplay = (props) => {
         transform="translate(-206.59003 -163.87113)"
         opacity="0.2"
       />
-    </svg>
+    </motion.svg>
   );
 };
 

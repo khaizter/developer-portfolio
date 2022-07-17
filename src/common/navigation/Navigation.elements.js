@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Device from "../../globals/Devices";
+import { motion } from "framer-motion";
 
 export const Nav = styled.nav`
   color: ${(props) => props.theme.white};
@@ -11,7 +12,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const List = styled.ul`
+export const List = styled(motion.ul)`
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -19,7 +20,7 @@ export const List = styled.ul`
   padding: 0;
 `;
 
-export const ListItem = styled.li`
+export const ListItem = styled(motion.li)`
   a {
     color: ${(props) => (props.resume ? props.theme.accent : "inherit")};
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
