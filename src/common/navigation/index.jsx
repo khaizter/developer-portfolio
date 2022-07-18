@@ -29,10 +29,10 @@ const Navigation = () => {
           <a href="#home-section">Home</a>
         </ListItem>
         <ListItem variants={listItemVariants}>
-          <a href=" #skills-section">Skills</a>
+          <a href="#projects-section">Projects</a>
         </ListItem>
         <ListItem variants={listItemVariants}>
-          <a href="#projects-section">Projects</a>
+          <a href=" #skills-section">Skills</a>
         </ListItem>
         <ListItem variants={listItemVariants}>
           <a href="#contact-section">Contact</a>

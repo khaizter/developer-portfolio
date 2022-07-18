@@ -96,13 +96,13 @@ const NavigationMenu = () => {
               </a>
             </ListItem>
             <ListItem variants={listItemVariants}>
-              <a href="#skills-section" onClick={hideMenuHandler}>
-                Skills
+              <a href="#projects-section" onClick={hideMenuHandler}>
+                Projects
               </a>
             </ListItem>
             <ListItem variants={listItemVariants}>
-              <a href="#projects-section" onClick={hideMenuHandler}>
-                Projects
+              <a href="#skills-section" onClick={hideMenuHandler}>
+                Skills
               </a>
             </ListItem>
             <ListItem variants={listItemVariants}>
