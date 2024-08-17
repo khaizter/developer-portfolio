@@ -7,6 +7,7 @@ import Header from "./common/header";
 import { light } from "./globals/Themes";
 import { ThemeProvider } from "styled-components";
 
+console.log(process.env.REACT_APP_SHOW_CONTACT);
 function App() {
   return (
     <ThemeProvider theme={light}>

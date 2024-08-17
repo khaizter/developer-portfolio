@@ -21,6 +21,8 @@ const listItemVariants = {
   visible: { opacity: 1 },
 };
 
+const hideContact = process.env.REACT_APP_SHOW_CONTACT === "false";
+
 const Navigation = () => {
   return (
     <Nav>
@@ -34,9 +36,11 @@ const Navigation = () => {
         <ListItem variants={listItemVariants}>
           <a href=" #skills-section">Skills</a>
         </ListItem>
-        <ListItem variants={listItemVariants}>
-          <a href="#contact-section">Contact</a>
-        </ListItem>
+        {!hideContact && (
+          <ListItem variants={listItemVariants}>
+            <a href="#contact-section">Contact</a>
+          </ListItem>
+        )}
       </List>
     </Nav>
   );

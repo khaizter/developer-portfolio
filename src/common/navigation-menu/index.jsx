@@ -65,6 +65,8 @@ const resumeVariants = {
   visible: { opacity: 1 },
 };
 
+const hideContact = process.env.REACT_APP_SHOW_CONTACT === "false";
+
 const NavigationMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -105,11 +107,13 @@ const NavigationMenu = () => {
                 Skills
               </a>
             </ListItem>
-            <ListItem variants={listItemVariants}>
-              <a href="#contact-section" onClick={hideMenuHandler}>
-                Contact
-              </a>
-            </ListItem>
+            {!hideContact && (
+              <ListItem variants={listItemVariants}>
+                <a href="#contact-section" onClick={hideMenuHandler}>
+                  Contact
+                </a>
+              </ListItem>
+            )}
           </List>
         </Nav>
       </Modal>

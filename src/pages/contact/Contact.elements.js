@@ -35,3 +35,8 @@ export const UpArrow = styled.a`
     display: block;
   }
 `;
+
+export const Copyrights = styled.div`
+  color: white;
+  text-align: center;
+`;
