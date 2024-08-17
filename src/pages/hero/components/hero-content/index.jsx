@@ -57,20 +57,20 @@ const HeroContent = () => {
       <HeroTitle variants={titleVariants}>Hi, I'm Khaizter</HeroTitle>
       <HeroParagraph variants={paragraphVariants}>
         A passionate Software Developer having a special interest in Frontend
-        technologies and experience of building Web applications with JavaScript
-        / ReactJS / NodeJS and some other cool libraries and frameworks.
+        technologies and experience of building Web applications with NextJS /
+        ReactJS / NodeJS and some other cool libraries and frameworks.
       </HeroParagraph>
       <HeroActions variants={actionsVariants}>
         <HeroButton as="a" href="https://github.com/khaizter/" target="_blank">
           View my Github
         </HeroButton>
-        <HeroButton
+        {/* <HeroButton
           as="a"
           href="https://www.linkedin.com/in/khaizter-vash-topacio-a22bb0232/"
           target="_blank"
         >
           View my LinkedIn
-        </HeroButton>
+        </HeroButton> */}
       </HeroActions>
     </StyledHeroContent>
   );

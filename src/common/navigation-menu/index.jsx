@@ -111,9 +111,6 @@ const NavigationMenu = () => {
               </a>
             </ListItem>
           </List>
-          <ResumeLink href={Resume} target="_blank" variants={resumeVariants}>
-            Resume
-          </ResumeLink>
         </Nav>
       </Modal>
       <Hamburger onClick={openMenuHandler}>

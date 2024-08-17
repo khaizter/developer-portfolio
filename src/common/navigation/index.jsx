@@ -37,11 +37,6 @@ const Navigation = () => {
         <ListItem variants={listItemVariants}>
           <a href="#contact-section">Contact</a>
         </ListItem>
-        <ListItemResume variants={listItemVariants}>
-          <a href={Resume} target="_blank">
-            Resume
-          </a>
-        </ListItemResume>
       </List>
     </Nav>
   );
