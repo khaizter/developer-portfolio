@@ -139,13 +139,13 @@ const ProjectDetails = ({ project, onClose }) => {
               return <li key={index}>{feature}</li>;
             })}
           </List>
-          {futureDevelopment && <h3>Future Development</h3>}
+          {/* {futureDevelopment && <h3>Future Development</h3>}
 
           <List>
             {futureDevelopment?.map((item, index) => {
               return <li key={index}>{item}</li>;
             })}
-          </List>
+          </List> */}
         </ScrollableDiv>
         <Actions variants={contentChildrenVariants}>
           <Link href={demoUrl} target="_blank">

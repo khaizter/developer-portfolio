@@ -8,6 +8,8 @@ import ExpressIcon from "../assets/svg/express.svg";
 import RestIcon from "../assets/svg/api.svg";
 import MongodbIcon from "../assets/svg/mongodb.svg";
 import StyledComponentsIcon from "../assets/svg/styled-components.svg";
+import TypescriptIcon from "../assets/svg/typescript.svg";
+import TailwindIcon from "../assets/svg/tailwindcss.svg";
 
 import TodoScreenshot1 from "../assets/images/todo-app_0.png";
 import TodoScreenshot2 from "../assets/images/todo-app_1.png";
@@ -25,7 +27,36 @@ import SneakersScreenshot1 from "../assets/images/sneakers-ecommerce_0.png";
 import SneakersScreenshot2 from "../assets/images/sneakers-ecommerce_1.png";
 import SneakersScreenshot3 from "../assets/images/sneakers-ecommerce_2.png";
 
+import ProjectAnimeScreenshot1 from "../assets/images/project-anime_0.png";
+import ProjectAnimeScreenshot2 from "../assets/images/project-anime_1.png";
+import ProjectAnimeScreenshot3 from "../assets/images/project-anime_2.png";
+
 const projects = [
+  {
+    images: [
+      { src: ProjectAnimeScreenshot1, name: "Project Anime Screenshot 3" },
+      { src: ProjectAnimeScreenshot2, name: "Project Anime Screenshot 1" },
+      { src: ProjectAnimeScreenshot3, name: "Project Anime Screenshot 2" },
+    ],
+    title: "Project Anime",
+    description:
+      "A web app for animes where you can authenticate and add an anime to favorites",
+    about: [
+      "Develop using next.js and tailwind.",
+      "Data used were from AniList API.",
+    ],
+    features: [
+      "Browsing and filtering animes",
+      "Authentication to add personal favorites",
+    ],
+    demoUrl: "https://project-anime-hiim.vercel.app/",
+    githubUrl: "https://github.com/khaizter/project-anime",
+    technologies: [
+      { src: TypescriptIcon, name: "Typescript" },
+      { src: TailwindIcon, name: "Tailwind CSS" },
+      { src: MongodbIcon, name: "Mongo DB" },
+    ],
+  },
   {
     images: [
       { src: TodoScreenshot1, name: "Todo Application Screenshot 1" },
@@ -62,37 +93,6 @@ const projects = [
       { src: ExpressIcon, name: "Express" },
       { src: RestIcon, name: "REST API" },
       { src: MongodbIcon, name: "Mongo DB" },
-    ],
-  },
-  {
-    images: [
-      { src: MovieScreenshot1, name: "My Movie List Screenshot 1" },
-      { src: MovieScreenshot2, name: "My Movie List Screenshot 2" },
-      { src: MovieScreenshot3, name: "My Movie List Screenshot 3" },
-    ],
-    title: "My Movie List",
-    description: "A React Application using TMDB API and SASS",
-    about: [
-      "This is the first website where I learned how to use HTTP request and requesting data to a REST API, during development I learned a lot of things like building pagination, modals, dropdowns from scratch, displaying and reading data through URL queries and params, and etc.",
-    ],
-    features: [
-      "Viewing specific movie details",
-      "Viewing trailers",
-      "Movie filtering by genre or search query",
-    ],
-    futureDevelopment: [
-      "Make it a full stack",
-      "Authentication",
-      "Adding a movie to favorite list",
-      "Adding comments to a movie",
-    ],
-    demoUrl: "https://khaizter-my-movie-list.netlify.app/",
-    githubUrl: "https://github.com/khaizter/my-movie-list",
-    technologies: [
-      { src: ReactIcon, name: "React" },
-      { src: ReactRouterIcon, name: "React Router" },
-      { src: SassIcon, name: "SASS" },
-      { src: RestIcon, name: "REST API" },
     ],
   },
   {
