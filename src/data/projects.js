@@ -10,6 +10,9 @@ import MongodbIcon from "../assets/svg/mongodb.svg";
 import StyledComponentsIcon from "../assets/svg/styled-components.svg";
 import TypescriptIcon from "../assets/svg/typescript.svg";
 import TailwindIcon from "../assets/svg/tailwindcss.svg";
+import ShadCNIcon from "../assets/svg/shadcn.svg";
+import NextJSIcon from "../assets/svg/next-js.svg";
+import NextAuthIcon from "../assets/svg/next-auth.svg";
 
 import TodoScreenshot1 from "../assets/images/todo-app_0.png";
 import TodoScreenshot2 from "../assets/images/todo-app_1.png";
@@ -52,7 +55,10 @@ const projects = [
     demoUrl: "https://project-anime-hiim.vercel.app/",
     githubUrl: "https://github.com/khaizter/project-anime",
     technologies: [
+      { src: NextJSIcon, name: "NextJS" },
+      { src: NextAuthIcon, name: "Next Auth" },
       { src: TypescriptIcon, name: "Typescript" },
+      { src: ShadCNIcon, name: "ShadCN" },
       { src: TailwindIcon, name: "Tailwind CSS" },
       { src: MongodbIcon, name: "Mongo DB" },
     ],
