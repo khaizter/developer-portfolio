@@ -58,7 +58,7 @@ const HeroContent = () => {
       <HeroParagraph variants={paragraphVariants}>
         A passionate Software Developer having a special interest in Frontend
         technologies and experience of building Web applications with NextJS /
-        ReactJS / NodeJS and some other cool libraries and frameworks.
+        ReactJS / NodeJS and other cool libraries and frameworks.
       </HeroParagraph>
       <HeroActions variants={actionsVariants}>
         <HeroButton as="a" href="https://github.com/khaizter/" target="_blank">
