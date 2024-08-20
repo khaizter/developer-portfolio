@@ -15,12 +15,25 @@ import FramerMotionIcon from "../assets/images/framer-motion.png";
 import RestAPIIcon from "../assets/svg/api.svg";
 import TypescriptIcon from "../assets/svg/typescript.svg";
 import StyledComponentsIcon from "../assets/svg/styled-components.svg";
+import NextJSIcon from "../assets/svg/next-js.svg";
+import NextAuthIcon from "../assets/svg/next-auth.svg";
+import GraphQLIcon from "../assets/svg/graphql.svg";
 
 const skills = [
   {
     icon: ReactIcon,
     hoverText: "React",
     category: "front-end",
+  },
+  {
+    icon: NextJSIcon,
+    hoverText: "NextJS",
+    category: "front-end",
+  },
+  {
+    icon: TypescriptIcon,
+    hoverText: "Typescript",
+    category: "others",
   },
   {
     icon: ReactRouterIcon,
@@ -31,6 +44,12 @@ const skills = [
     icon: ReduxIcon,
     hoverText: "Redux",
     category: "others",
+  },
+
+  {
+    icon: NextAuthIcon,
+    hoverText: "Next Auth",
+    category: "back-end",
   },
   {
     icon: StyledComponentsIcon,
@@ -68,6 +87,11 @@ const skills = [
     category: "back-end",
   },
   {
+    icon: GraphQLIcon,
+    hoverText: "GrapQL",
+    category: "back-end",
+  },
+  {
     icon: MongoDBIcon,
     hoverText: "MongoDB",
     category: "back-end",
@@ -87,7 +111,6 @@ const skills = [
     hoverText: "Github",
     category: "others",
   },
-
   {
     icon: FigmaIcon,
     hoverText: "Figma",
@@ -97,11 +120,6 @@ const skills = [
     icon: FramerMotionIcon,
     hoverText: "Framer Motion",
     category: "front-end",
-  },
-  {
-    icon: TypescriptIcon,
-    hoverText: "Typescript",
-    category: "others",
   },
 ];
 

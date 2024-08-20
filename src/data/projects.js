@@ -13,6 +13,7 @@ import TailwindIcon from "../assets/svg/tailwindcss.svg";
 import ShadCNIcon from "../assets/svg/shadcn.svg";
 import NextJSIcon from "../assets/svg/next-js.svg";
 import NextAuthIcon from "../assets/svg/next-auth.svg";
+import GraphQLIcon from "../assets/svg/graphql.svg";
 
 import TodoScreenshot1 from "../assets/images/todo-app_0.png";
 import TodoScreenshot2 from "../assets/images/todo-app_1.png";
@@ -58,6 +59,7 @@ const projects = [
       { src: NextJSIcon, name: "NextJS" },
       { src: NextAuthIcon, name: "Next Auth" },
       { src: TypescriptIcon, name: "Typescript" },
+      { src: GraphQLIcon, name: "GraphQL" },
       { src: ShadCNIcon, name: "ShadCN" },
       { src: TailwindIcon, name: "Tailwind CSS" },
       { src: MongodbIcon, name: "Mongo DB" },
